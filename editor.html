@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>editor</title>
+    </head>
+    <body>
+        <h1 id="sampelText" style="font-size: 45px;">Sampel text for changing style</h1>
+        <br>
+        <div>
+            <button onclick="fontSizeInc()">
+              font size++
+            </button>
+            <button onclick="fontSizeDec() ">
+              font size--  
+            </button>
+        </div>
+
+
+        <script>
+            function fontSizeInc()
+            {
+             var sampelText = document.getElementById('sampelText');
+
+             var curFontsize = sampelText.style.fontSize;
+             curFontsize = curFontsize.replace('px', '');
+             curFontsize = parseInt(curFontsize);
+
+             sampelText.style.fontSize = (curFontsize + 1) + 'px';
+
+
+            }
+            function fontSizeDec()
+            {
+             var sampelText = document.getElementById('sampelText');
+
+             var curFontSize= sampelText.style.fontSize;
+             curFontSize = curFontSize.replace('px', '');
+             curFontSize = parseInt(curFontSize);
+
+             sampelText.style.fontSize = (curFontSize -1) + 'px';
+            }
+
+        </script>
+    </body>
+</html>

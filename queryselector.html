@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>queryselector</title>
+        <style>
+            .sampel{
+                font-size: 36px;
+                color: rgb(241, 130, 65);
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="sampelh1">Heading1</h1>
+        <h1>Heading2</h1>
+        <h1 class="sampelh1">Heading3</h1>
+        <h1>Heading4</h1>
+        <h1 class="sampelh1">Heading5</h1>
+        <h1>Heading6</h1>
+        <h1 class="sampelh1">Heading7</h1>
+        <h2 class="sampelh1">Heading8 with H2</h2>
+        <h2 class="sampelh1">HEADING9</h2>
+
+        <script>
+            var headings = document.getElementsByName('h1');
+            for(var i = 0 ; i < headings.length; i++)
+            {
+                console.log(headings[i].innerText);
+            }
+            console.log('-------');
+
+            var headingsclass = document.getElementsByClassName('sampelh1');
+            console.log(headingsclass)
+            
+            for(i=0 ; i < headingsclass.length ; i++)
+            {
+                console.log(headingsclass[i].innerHTML);
+            }
+            console.log('-------');
+
+            //var headings2 = document.querySelector('h1');
+            var headings2 = document.querySelectorAll('h1');
+            for(i=0 ; i < headings2.length ; i++)
+            {
+                console.log(headings2[i].innerHTML);
+            }
+            console.log('-------');
+           // var headingclass2 = document.querySelector('.sampelh1');
+            var headingclass2 = document.querySelectorAll('.sampelh1');
+            for(i=0 ; i < headingclass2.length ; i++)
+            {
+                console.log(headingclass2[i].innerHTML);
+            }
+            console.log('-------');
+            var headingclassTag = document.querySelectorAll('h2');
+            for(i=0 ; i < headingclassTag.length ; i++)
+            {
+                if(headingclassTag[i].className =='sampelh1')
+                {
+                    console.log(headingclassTag[i].innerText)
+                }else{
+                    console.log(headingclassTag[i].className);
+                }
+            }
+            var headings = document.getElementsByClassName('sampelh1');
+
+            for(var i = 0 ; i < headings.length ; i++)
+            {
+                if(i % 2 == 0)
+                {
+                    headings[i].style.color='antiquewhite';
+                    headings[i].style.backgroundColor='rgb(108, 161, 157)';
+                }else{
+                    headings[i].style.color='rgb(157, 233, 107)';
+                    headings[i].style.backgroundColor='rgb(241, 130, 65)';
+                }
+            }
+
+            
+        </script>
+    </body>
+</html>
